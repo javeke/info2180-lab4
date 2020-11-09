@@ -1,13 +1,13 @@
-window.onload = ev =>{
-    var searchBtn = document.getElementById('searchBtn');
+var searchBtn = document.getElementById('searchBtn');
+var result = document.getElementById('result');
+var value = document.getElementById('searchBox');
 
-    searchBtn.onclick = ev => {
-        fetch('superheroes.php',{method: 'get'})
-        .then((response)=>{
-            return response.text();
-        })
-        .then((data)=>{
-            alert(data);
-        });
-    }
+searchBtn.onclick = ev => {
+    fetch(`superheroes.php?query=${value.value}`, { method: 'get' })
+    .then((response)=>{
+        return response.text();
+    })
+    .then((data)=>{
+        result.innerHTML = data;
+    });
 }
