@@ -42,3 +42,7 @@ body{
     outline: none;
     cursor: pointer;
 }
+
+#not-found{
+    color: red;
+}

@@ -93,6 +93,6 @@ $superheroes = [
     }
 
     if(!$found){
-        echo "<h3>Superhero not found</h3>";
+        echo '<h3 id="not-found">Superhero not found</h3>';
     }
 ?>
