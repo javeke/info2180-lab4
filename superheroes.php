@@ -67,7 +67,7 @@ $superheroes = [
 
 
 <?php
-    $hero = $_GET['query']; 
+    $hero = htmlspecialchars($_GET['query']); 
     $alias = "";
     $name = "";
     $found = false;
